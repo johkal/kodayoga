@@ -1,0 +1,21 @@
+.store {
+    display: flex;
+    flex-direction: row;
+}
+.productList {
+    list-style-type: none;
+    /* flex-direction: row;
+    align-items: center;
+    justify-content: center; */
+}
+.productItem {
+    list-style-type: none;
+}
+.productItem label {
+    display: block;
+    text-align: center;
+}
+.productThumb {
+    max-width: 150px;
+    max-height: 150px;
+}
