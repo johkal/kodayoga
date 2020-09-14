@@ -8,17 +8,19 @@
             6,
             7
         ],
-        "foot": [
-            "men"
+        "filter": [
+            "men",
+            "pattern"
         ],
         "img": "https://ean-images.booztcdn.com/happy-socks/1300x1700/hapban016500_cnavy.jpg"
     },
     {
         "name": "Watermelon",
         "type": [7],
-        "foot": [
+        "filter": [
             "men",
-            "women"
+            "women",
+            "pattern"
         ],
         "img": "https://www.divaslimited.com/assets/images/1348watermelon.jpg"
     },
@@ -29,9 +31,10 @@
             6,
             7
         ],
-        "foot": [
+        "filter": [
             "women",
-            "kids"
+            "kids",
+            "pattern"
         ],
         "img": "https://www.divaslimited.com/assets/images/1320.jpg"
     }

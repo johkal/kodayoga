@@ -1,13 +1,25 @@
 <h3>Store</h3>
 <div class="store">
-    <h2>{{filter}}</h2>
-
-    <!-- <ul class="productList"> -->
-    <li class="productItem" *ngFor="let socks of Socks">
-        <div *ngIf="socks.foot.includes(filter)">
-            <img class="productThumb" src={{socks.img}}>
-            <label>{{socks.name}}</label>
+    <div class="filterSection">
+        <div class="filter" *ngFor="let filter of filters">
+            <input type="radio" [checked]="filter == activeFilter">{{filter}}
         </div>
+    </div>
+
+    <li class="productItem" *ngFor="let socks of Socks">
+        <div *ngIf="!activeFilter; then showAll else filter">
+        </div>
+        <ng-template #filter>
+            <div *ngIf="socks.filter.includes(activeFilter)">
+                <img class="productThumb" src={{socks.img}}>
+                <label>{{socks.name}}</label>
+            </div>
+        </ng-template>
+        <ng-template #showAll>
+            <div>
+                <img class="productThumb" src={{socks.img}}>
+                <label>{{socks.name}}</label>
+            </div>
+        </ng-template>
     </li>
-    <!-- </ul> -->
 </div>

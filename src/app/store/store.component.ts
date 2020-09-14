@@ -11,7 +11,9 @@ import socks from '../../assets/products/productList.json'
   styleUrls: ['./store.component.css']
 })
 export class StoreComponent implements OnInit {
-  filter = '';
+  activeFilter = null;
+  filters = ['men', 'women', 'kids', 'solidColor', 'pattern'];
+  colors = ['red', 'yellow', 'green', 'blue'];
   company = 'Urban Socks';
   slogan = 'We keep your feet warm. And cool'
   Socks: any = socks;
@@ -22,7 +24,8 @@ export class StoreComponent implements OnInit {
 
   ngOnInit() {
     this.titleService.setTitle("Store - " + this.company)
-    this.filter = this.route.snapshot.paramMap.get('filter');
+    this.activeFilter = this.route.snapshot.paramMap.get('filter');
+    console.log(this.activeFilter);
   }
 
 }
