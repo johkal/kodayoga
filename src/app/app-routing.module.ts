@@ -1,31 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { AppComponent } from './app.component';
-import { StoreComponent } from './store/store.component';
 
 const routes: Routes = [
     {
         path: '',
-        component: HomeComponent
+        redirectTo: 'home',
+        pathMatch: 'full'
     },
     {
-        path: 'store',
-        component: StoreComponent
-    },
-    {
-        path: 'store/:filter',
-        component: StoreComponent,
-    },
-    {
-        path: '',
-        component: AppComponent,
+        path: 'home',
+        component: HomeComponent,
         pathMatch: 'full'
     },
     {
         path: '**',
-        redirectTo: '/',
-        pathMatch: 'full'
+        redirectTo: 'home'
     }
 ];
 

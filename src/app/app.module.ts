@@ -6,22 +6,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { StoreComponent } from './store/store.component';
-import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { StoreModule } from './store/store.module';
+import { CartModule } from './cart/cart.module';
 import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent,
-    StoreComponent,
-    ShoppingCartComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HomeModule,
+    CartModule,
+    StoreModule,
     AppRoutingModule
   ],
   providers: [Title],
