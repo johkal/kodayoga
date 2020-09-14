@@ -2,8 +2,14 @@
 <div class="store">
     <div class="filterSection">
         <div class="filter" *ngFor="let filter of filters">
-            <input type="radio" [checked]="filter == activeFilter">{{filter}}
+            <input type="checkbox"
+                ng-model="checked"
+                id={{filter}}
+                [checked]="filter == activeFilter" 
+                (change)="changeFilter($event)">{{filter}}
         </div>
+        <input type="button"
+            value="Submit"/>
     </div>
 
     <li class="productItem" *ngFor="let socks of Socks">

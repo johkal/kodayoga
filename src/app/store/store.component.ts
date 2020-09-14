@@ -18,9 +18,13 @@ export class StoreComponent implements OnInit {
   slogan = 'We keep your feet warm. And cool'
   Socks: any = socks;
   constructor(
-    private titleService:Title,
-    private route: ActivatedRoute){
-   }
+    private titleService: Title,
+    private route: ActivatedRoute) {
+  }
+
+  changeFilter(e) {
+    console.log(e.target.id);
+  }
 
   ngOnInit() {
     this.titleService.setTitle("Store - " + this.company)
