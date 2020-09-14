@@ -1,9 +1,13 @@
 <h3>Store</h3>
 <div class="store">
+    <h2>{{filter}}</h2>
+
     <!-- <ul class="productList"> -->
-        <li class="productItem" *ngFor="let socks of Socks">
+    <li class="productItem" *ngFor="let socks of Socks">
+        <div *ngIf="socks.foot.includes(filter)">
             <img class="productThumb" src={{socks.img}}>
             <label>{{socks.name}}</label>
-        </li>
+        </div>
+    </li>
     <!-- </ul> -->
 </div>

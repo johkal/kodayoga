@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 // import socks from '../../assets/img/socks';
 import socks from '../../assets/products/productList.json'
 
@@ -10,16 +11,18 @@ import socks from '../../assets/products/productList.json'
   styleUrls: ['./store.component.css']
 })
 export class StoreComponent implements OnInit {
+  filter = '';
   company = 'Urban Socks';
   slogan = 'We keep your feet warm. And cool'
   Socks: any = socks;
-  constructor(private titleService:Title) { }
+  constructor(
+    private titleService:Title,
+    private route: ActivatedRoute){
+   }
 
   ngOnInit() {
     this.titleService.setTitle("Store - " + this.company)
-    // console.log('socks:')
-    // console.log(Object.getOwnPropertyNames(socks[1]))
-    // console.log(Object.values(socks))
+    this.filter = this.route.snapshot.paramMap.get('filter');
   }
 
 }
