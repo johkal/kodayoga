@@ -1,0 +1,34 @@
+<div class="page-container">
+  <div class="container-fluid header-container">
+    <div class="row">
+      <div *ngIf="!isLoading" class="col">
+        <owl-carousel-o *ngIf="largeCarouselOptions" [options]="largeCarouselOptions" #largeCarousel>
+          <ng-container *ngFor="let item of largeCarouselData">
+            <ng-template carouselSlide>
+              <div class="large-carousel-img-container">
+                <img [src]="item.imageUri" [alt]="item.imageAlt" />
+                <div class="large-carousel-gradient">
+                  <div class="large-carousel-left">
+                    <img class="nav-arrow flip-horizontal" src="../../assets/carousel_large_nav_arrow.svg"
+                      alt="Föregående" (click)="largeCarousel.prev()" />
+                  </div>
+                  <div class="large-carousel-middle">
+                    <h1>{{ item.title }}</h1>
+                    <p>{{ item.text }}</p>
+                    <a [routerLink]="[item.link]">
+                      <button>{{ item.buttonText }}</button>
+                    </a>
+                  </div>
+                  <div class="large-carousel-right">
+                    <img class="nav-arrow" src="../../assets/carousel_large_nav_arrow.svg" alt="Nästa"
+                      (click)="largeCarousel.next()" />
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
+</div>

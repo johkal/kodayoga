@@ -1,0 +1,103 @@
+.header-container {
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+  padding: 0;
+  overflow: hidden;
+}
+
+.large-carousel-img-container {
+  width: 100%;
+  height: 45vh;
+  position: relative;
+}
+
+img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+
+.large-carousel-gradient {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+  background: linear-gradient(90deg, rgb(85,224,173) 0%, rgba(22, 112, 143, 0) 100%);
+}
+
+.large-carousel-left {
+  position: absolute;
+  display: flex;
+  left: 0rem;
+  width: 5vw;
+  height: 100%;
+  padding-left: 3.75vw;
+  align-items: center;
+}
+
+.large-carousel-middle {
+  position: absolute;
+  bottom: 3rem;
+  left: 15rem;
+  width: 33vw;
+  z-index: 20;
+}
+
+.large-carousel-right {
+  position: absolute;
+  display: flex;
+  right: 0rem;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 3.75rem;
+  width: 5vw;
+  height: 100%;
+}
+
+.nav-arrow {
+  height: 1.25rem;
+  width: auto;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  z-index: 20;
+}
+
+.flip-horizontal {
+  transform: scaleX(-1);
+}
+
+h3 {
+  color: rgb(255, 255, 255);
+  font-size: 1.625rem;
+  font-weight: 300;
+  margin-top: 2rem;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 2rem 0;
+}
+
+p {
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+button {
+  margin-top: 20px;
+  width: 156px;
+  height: 46px;
+  background: linear-gradient(-206.56505117707798deg,  rgb(235, 228, 130) 0%, rgb(85,224,173) 100%);
+  border-radius: 2px;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  border: 0;
+}
