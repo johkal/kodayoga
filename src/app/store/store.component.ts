@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import {  ActivatedRoute } from '@angular/router';
 // import socks from '../../assets/img/socks';
 import socks from '../../assets/products/productList.json'
 
