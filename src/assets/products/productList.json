@@ -16,7 +16,9 @@
     },
     {
         "name": "Watermelon",
-        "type": [7],
+        "type": [
+            7
+        ],
         "filter": [
             "men",
             "women",
@@ -37,5 +39,110 @@
             "pattern"
         ],
         "img": "https://www.divaslimited.com/assets/images/1320.jpg"
+    },
+    {
+        "name": "HaveToPee",
+        "type": [
+            3,
+            6,
+            7
+        ],
+        "filter": [
+            "men",
+            "pattern"
+        ],
+        "img": "https://cdn.shopify.com/s/files/1/0234/4461/products/i-have-to-pee-socks-funny_857x.jpg?v=1571438743"
+    },
+    {
+        "name": "Fishy",
+        "type": [
+            3,
+            6,
+            7
+        ],
+        "filter": [
+            "men",
+            "pattern"
+        ],
+        "img": "https://lh3.googleusercontent.com/proxy/TfmsKj6ayesCJxqAG648hFxxiMJNorYzftIV4EuQxMkBquh_3mmMqbozigwwSM75zNiWyMArMoT0PRsWD4yBA-xwMfKZ-zb-tJPRJtJU-sx5izsuhqE6j3AInCHdKZpoagHgtAGDFe7jpM-FtscNYBNQsYP1F6-1R4uA1RshcJYTpTIWZy-vEsETmngGShYj"
+    },
+    {
+        "name": "Pizza",
+        "type": [
+            3,
+            6,
+            7
+        ],
+        "filter": [
+            "men",
+            "pattern"
+        ],
+        "img": "https://images-na.ssl-images-amazon.com/images/I/8189uAG8JkL._AC_UL1500_.jpg"
+    },
+    {
+        "name": "Cupcake",
+        "type": [
+            3,
+            6,
+            7
+        ],
+        "filter": [
+            "women",
+            "pattern"
+        ],
+        "img": "https://img.tradewheel.com/uploads/images/products/6/9/girls-women-socks-funny-socks-korean-socks-for-women1-0605771001553644657.png"
+    },
+    {
+        "name": "CarpeDiem",
+        "type": [
+            3,
+            6,
+            7
+        ],
+        "filter": [
+            "women",
+            "pattern"
+        ],
+        "img": "https://cdn.shopify.com/s/files/1/0234/4461/products/carpe-the-fuck-out-of-this-diem-mens-socks_857x.jpg?v=1571438711"
+    },
+    {
+        "name": "BearOnBike",
+        "type": [
+            3,
+            6,
+            7
+        ],
+        "filter": [
+            "men",
+            "pattern"
+        ],
+        "img": "https://boldsocks-2018-com.s3.amazonaws.com/wp-content/uploads/26701bearonbike01.jpg"
+    },
+    {
+        "name": "Drumpf",
+        "type": [
+            3,
+            6,
+            7
+        ],
+        "filter": [
+            "men",
+            "pattern"
+        ],
+        "img": "https://i.pinimg.com/originals/76/f4/1c/76f41ca5d1b1cb1758ff2327114c0c66.jpg"
+    },
+    {
+        "name": "Red",
+        "type": [
+            2,
+            3,
+            4
+        ],
+        "filter": [
+            "men",
+            "women",
+            "solidColor"
+        ],
+        "img": "https://www.simoncarter.net/Images/SuperZoom/000019_1.jpg"
     }
 ]

@@ -1,31 +1,34 @@
-<h3>Store</h3>
-<div class="store">
+<div class="storeContainer">
+    <h3>Store</h3>
     <div class="filterSection">
         <div class="filter" *ngFor="let filter of filters">
-            <input type="checkbox"
-                ng-model="checked"
-                id={{filter}}
-                [checked]="filter == activeFilter" 
-                (change)="changeFilter($event)">{{filter}}
+            <label for="{{filter}}">
+                <input type="checkbox" ng-model="checked" id={{filter}} [checked]="filter == activeFilter"
+                    (change)="changeFilter($event)" />
+                <span>{{filter}}</span>
+            </label>
         </div>
-        <input type="button"
-            value="Submit"/>
     </div>
-
-    <li class="productItem" *ngFor="let socks of Socks">
-        <div *ngIf="!activeFilter; then showAll else filter">
+    <div class="productContainer">
+        <div class="products">
+            <ng-container *ngFor="let socks of Socks">
+                <div *ngIf="activeFilter.length == 0; then showAll else filter">
+                </div>
+                <ng-template #filter>
+                    <ng-container *ngFor="let filter of socks.filter">
+                        <li *ngIf="activeFilter == filter">
+                            <img class="productThumb" src={{socks.img}}>
+                            <p>{{socks.name}}</p>
+                        </li>
+                    </ng-container>
+                </ng-template>
+                <ng-template #showAll>
+                    <li>
+                        <img class="productThumb" src={{socks.img}}>
+                        <p>{{socks.name}}</p>
+                    </li>
+                </ng-template>
+            </ng-container>
         </div>
-        <ng-template #filter>
-            <div *ngIf="socks.filter.includes(activeFilter)">
-                <img class="productThumb" src={{socks.img}}>
-                <label>{{socks.name}}</label>
-            </div>
-        </ng-template>
-        <ng-template #showAll>
-            <div>
-                <img class="productThumb" src={{socks.img}}>
-                <label>{{socks.name}}</label>
-            </div>
-        </ng-template>
-    </li>
+    </div>
 </div>

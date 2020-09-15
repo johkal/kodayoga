@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import {  ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 // import socks from '../../assets/img/socks';
 import socks from '../../assets/products/productList.json'
 
@@ -11,7 +11,7 @@ import socks from '../../assets/products/productList.json'
   styleUrls: ['./store.component.css']
 })
 export class StoreComponent implements OnInit {
-  activeFilter = null;
+  activeFilter = '';
   filters = ['men', 'women', 'kids', 'solidColor', 'pattern'];
   colors = ['red', 'yellow', 'green', 'blue'];
   company = 'Urban Socks';
@@ -23,12 +23,16 @@ export class StoreComponent implements OnInit {
   }
 
   changeFilter(e) {
-    console.log(e.target.id);
+    if (e.target.checked)
+      this.activeFilter = e.target.id
+    else
+      this.activeFilter = '';
   }
 
   ngOnInit() {
     this.titleService.setTitle("Store - " + this.company)
-    this.activeFilter = this.route.snapshot.paramMap.get('filter');
+    if (this.route.snapshot.paramMap.get('filter'))
+      this.activeFilter = this.route.snapshot.paramMap.get('filter');
     console.log(this.activeFilter);
   }
 
