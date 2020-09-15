@@ -48,10 +48,16 @@
 }
 .products p {
   /* display: block; */
-  text-align: center;
+  text-align: left;
   color: black;
-  font-size: 10px;
+  font-size: 14px;
   margin: auto;
+}
+.products li {
+  margin-bottom: 14px;
+}
+.products input[type="number"] {
+  width: 20%;
 }
 .productThumb {
   max-width: 150px;

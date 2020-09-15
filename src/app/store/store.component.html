@@ -19,13 +19,18 @@
                         <li *ngIf="activeFilter == filter">
                             <img class="productThumb" src={{socks.img}}>
                             <p>{{socks.name}}</p>
+                            <input type="number" value="0" />
+                            <input type="button" value="Add to cart" />
                         </li>
                     </ng-container>
                 </ng-template>
                 <ng-template #showAll>
+                    <!-- <product-card [sock]=socks></product-card> -->
                     <li>
                         <img class="productThumb" src={{socks.img}}>
                         <p>{{socks.name}}</p>
+                        <input type="number" value="0" />
+                        <input type="button" value="Add to cart" />
                     </li>
                 </ng-template>
             </ng-container>

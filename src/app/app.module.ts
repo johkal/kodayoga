@@ -9,12 +9,14 @@ import { FooterComponent } from './footer/footer.component';
 import { StoreModule } from './store/store.module';
 import { CartModule } from './cart/cart.module';
 import { HomeModule } from './home/home.module';
+import { ProductCardComponent } from './product-card/product-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,
