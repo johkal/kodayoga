@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import socks from '../../assets/products/productList.json'
 
 
+
 @Component({
   selector: 'app-store',
   templateUrl: './store.component.html',
@@ -20,6 +21,10 @@ export class StoreComponent implements OnInit {
   constructor(
     private titleService: Title,
     private route: ActivatedRoute) {
+  }
+
+  addToCart(e) {
+    console.log(e);
   }
 
   changeFilter(e) {
