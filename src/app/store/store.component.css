@@ -28,6 +28,13 @@
 .filter span {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+.productTypes {
+  display: flex;
+}
+.productTypes img{
+  max-height: 50px;
+  margin-right: 20px;
+}
 .productContainer {
   list-style:none;
   margin: 0;
