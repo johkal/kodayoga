@@ -10,28 +10,14 @@
         </div>
         <div class="productTypes">
             <div *ngFor="let type of types; index as i">
-                <img (click)="toggleSelected(type)" src={{type.url}}{{type.img}}>
+                <img (click)="toggleSelectedType(type)" src={{type.url}}{{type.img}}>
             </div>
         </div>
     </div>
     <div class="productContainer">
         <div class="products">
             <ng-container *ngFor="let socks of Socks">
-                <div *ngIf="activeFilter.length == 0; then showAll else filter">
-                </div>
-                <ng-template #filter>
-                    <ng-container *ngFor="let filter of socks.filter">
-                        <li *ngIf="activeFilter == filter">
-                            <img class="productThumb" src={{socks.img}}>
-                            <p>{{socks.name}}</p>
-                            <input type="number" value="0" ng-model="socks" />
-                            <button (click)="addToCart(socks)" formtarget="_blank">Add to cart</button>
-                        </li>
-                    </ng-container>
-                </ng-template>
-                <ng-template #showAll>
-                    <app-product-card [sock]="socks"></app-product-card>
-                </ng-template>
+                <app-product-card [sock]="socks" [selectedType]=activeType></app-product-card>
             </ng-container>
         </div>
     </div>

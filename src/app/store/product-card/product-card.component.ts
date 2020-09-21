@@ -11,10 +11,11 @@ import { TestBed } from '@angular/core/testing';
 export class ProductCardComponent implements OnInit {
   test : String;
   @Input() sock : Sock;
+  @Input() selectedType;
   constructor() { }
 
-  addToCart(Id, Type, Amount) {
-    const cartObj : CartObject = {id: Id, type: Type, amount: Amount};
+  addToCart(Id, Amount) {
+    const cartObj : CartObject = {id: Id, type: this.selectedType, amount: Amount};
     console.log(cartObj);
     console.log(this.sock.id + ": " + Id);
   }

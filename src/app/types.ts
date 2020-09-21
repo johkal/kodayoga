@@ -1,5 +1,6 @@
 export interface Types {
     id: number;
-    src: string;
-    srcSelected: string;
+    selected: boolean;
+    url: string;
+    img: string;
 }

@@ -2,5 +2,5 @@
     <img class="productThumb" src={{sock.img}}>
     <p>{{sock.name}}</p>
     <input #inputValue type="number" value="0" />
-    <button (click)="addToCart(sock.id, sock.type, inputValue.value); inputValue.value = 0" formtarget="_blank">Add to cart</button>
+    <button (click)="addToCart(sock.id, inputValue.value); inputValue.value = 0" formtarget="_blank">Add to cart</button>
 </li>
