@@ -7,4 +7,5 @@ input[type="number"] {
 .productThumb {
     max-width: 150px;
     max-height: 150px;
+    border: 1px dotted red;
 }

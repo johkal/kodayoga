@@ -5,13 +5,16 @@
   flex-direction: column;
   align-items: center;
 }
-
+.storeContainer #heading {
+  text-align: center;
+}
 .products {
   display: flex;
   flex-direction: row;
 }
 .filterSection {
   display: flex;
+  min-height: 15vh;
   margin-bottom: 5%;
 }
 .filterSection input {
@@ -35,10 +38,18 @@
   max-height: 50px;
   margin-right: 20px;
 }
+#typeSelection {
+  display: block;
+  text-align: center;
+}
+#typeSelection p {
+  color: gray;
+}
 .productContainer {
   list-style:none;
   margin: 0;
   padding: 0;
+  margin-bottom: 200px;
 }
 .products {
   padding: 0;
