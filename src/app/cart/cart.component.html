@@ -1,12 +1,10 @@
-<p>cart works!</p>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<h1>AAAAAAA</h1>
-<li *ngFor="let object of cart">
-    <p>{{object.id}}</p>
-</li>
+<div class="cartContainer">
+    <h1>Cart</h1>
+    <li *ngFor="let sock of socksInCart">
+        <img src={{sock.img}} />
+        <p>{{sock.name}}</p>
+        <p>Amount: {{sock.amount}}</p>
+        <input type='button' value='Remove' (click)='removeFromCart(sock.id)' />
+    </li>
+
+    <input *ngIf=cart.length type='button' (click)='clearCart()' value='Clear cart'>

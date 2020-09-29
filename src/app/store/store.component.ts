@@ -29,10 +29,6 @@ export class StoreComponent implements OnInit {
     private route: ActivatedRoute) {
   }
 
-  addToCart(e) {
-    console.log(e)
-  }
-
   setDefaultSockTypes() {
     let sockTypes = [];
     for (let i = 1; i < 6; i++)

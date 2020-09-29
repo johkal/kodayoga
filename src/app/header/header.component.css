@@ -26,3 +26,27 @@
     margin-right: 30px;
     color: #ffffff;
 }
+.headerLinks {
+    display: inline;
+}
+.cartBadge {
+    position: fixed;
+    z-index: 99;
+    top: 22px;
+    right: 22px;
+    text-align: center;
+}
+.cartCount {
+    position: absolute;
+    z-index: 1;
+    top: -6px;
+    right: -6px;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 10px;
+    border-radius: 50%;
+    background-color: #ff4927;
+    color: #fff;
+    animation: zoom 3s 3s both infinite;
+}
