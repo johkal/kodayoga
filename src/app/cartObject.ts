@@ -1,5 +1,7 @@
+import { Sock } from './sock';
+
 export interface CartObject {
-    id: number;
-    type: number;
+    sock: Sock;
     amount: number;
+    type: number;
 }

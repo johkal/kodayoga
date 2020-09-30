@@ -10,16 +10,8 @@ import { CartObject } from '../cartObject';
 export class HeaderComponent implements OnInit {
   company = 'Urban Socks';
   slogan = 'We keep your feet warm. And cool.';
-  cart: CartObject[] = []
-  constructor(private cartService: CartService) { }
+  constructor(public cartService: CartService) { }
 
-  getCart(): void {
-    this.cartService.getCart()
-      .subscribe(cart => this.cart = cart)
-    this.cartService.clearCart()
-      .subscribe(cart => this.cart = cart)
-  }
   ngOnInit(): void {
-    this.getCart()
   }
 }

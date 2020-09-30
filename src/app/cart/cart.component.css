@@ -13,5 +13,8 @@
     margin-right: 20px;
   }
   li {
-      list-style-type: none;
+    list-style-type: none;
+  }
+  ul {
+    margin-bottom: 10%;
   }

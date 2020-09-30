@@ -1,10 +1,21 @@
 <div class="cartContainer">
     <h1>Cart</h1>
-    <li *ngFor="let sock of socksInCart">
-        <img src={{sock.img}} />
-        <p>{{sock.name}}</p>
-        <p>Amount: {{sock.amount}}</p>
-        <input type='button' value='Remove' (click)='removeFromCart(sock.id)' />
-    </li>
+    <ul>
+        <li *ngFor="let cartObject of cartService.cart">
+            <img src={{cartObject.sock.img}} />
+            <p>{{cartObject.sock.name}}</p>
+            <p>Amount: {{cartObject.amount}}</p>
+            <input type='button' value='Remove' (click)='removeFromCart(cartObject.sock.id)' />
+        </li>
+    </ul>
+    <ng-container *ngIf=cartService.cart.length>
+        <p>Total cost: {{cartService.totalCost}}</p>
+        <input type='button' (click)='clearCart()' value='Clear cart'>
+        <br>
 
-    <input *ngIf=cart.length type='button' (click)='clearCart()' value='Clear cart'>
+        <p>Discount code</p>
+        <input #discountCode type='text' value=''>
+
+        <input type='button' (click)='order()' value='Submit order'>
+    </ng-container>
+</div>

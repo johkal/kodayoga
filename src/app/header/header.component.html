@@ -8,7 +8,7 @@
     <a class="headerLink" routerLink="/store" routerLinkActive="active">Store</a>
     <a class="headerLink" id="cartHeader" routerLink="/cart" routerLinkActive="active">Cart</a>
     <div class="cartBadge">
-      <span *ngIf=cart.length class="cartCount">{{cart.length}}</span>
+      <span *ngIf=cartService.cart.length class="cartCount">{{cartService.cart.length}}</span>
     </div>
   </div>
 </div>

@@ -1,16 +1,15 @@
 <li>
     <img class="productThumb" src={{sock.img}}>
     <p>{{sock.name}}</p>
-    <input #inputValue type="number" value="0" />
+    <input #amount type="number" value="0" />
     <ng-container>
         <div *ngIf="selectedType != ''; then cartOk else cartNok">
         </div>
         <ng-template #cartOk>
-            <button (click)="addToCart(sock.id, inputValue.value); inputValue.value = 0" formtarget="_blank">Add to
-                cart</button>
+            <button (click)="cartService.addToCart(sock, amount.value, selectedType); amount.value = 0" formtarget="_blank">Add to cart</button>
         </ng-template>
         <ng-template #cartNok>
-            <button (click)="testing()" formtarget="_blank">Add to cart</button>
+            <button (click)="alert()" formtarget="_blank">Add to cart</button>
         </ng-template>
     </ng-container>
 </li>

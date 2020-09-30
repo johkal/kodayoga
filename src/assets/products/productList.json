@@ -8,6 +8,7 @@
             3,
             4
         ],
+        "price": 40, 
         "filter": [
             "men",
             "pattern"
@@ -20,6 +21,7 @@
         "type": [
             3
         ],
+        "price": 50, 
         "filter": [
             "men",
             "women",
@@ -34,6 +36,7 @@
             3,
             4
         ],
+        "price": 30, 
         "filter": [
             "women",
             "kids",
@@ -48,6 +51,7 @@
             3,
             5
         ],
+        "price": 50, 
         "filter": [
             "men",
             "pattern"
@@ -61,6 +65,7 @@
             1,
             5
         ],
+        "price": 40, 
         "filter": [
             "men",
             "pattern"
@@ -75,6 +80,7 @@
             2,
             5
         ],
+        "price": 40, 
         "filter": [
             "men",
             "pattern"
@@ -88,6 +94,7 @@
             1,
             2
         ],
+        "price": 50, 
         "filter": [
             "women",
             "kids",
@@ -103,6 +110,7 @@
             4,
             5
         ],
+        "price": 30, 
         "filter": [
             "women",
             "pattern"
@@ -116,6 +124,7 @@
             1,
             2
         ],
+        "price": 30, 
         "filter": [
             "men",
             "pattern"
@@ -132,6 +141,7 @@
             4,
             5
         ],
+        "price": 60, 
         "filter": [
             "men",
             "pattern"
@@ -146,11 +156,29 @@
             3,
             5
         ],
+        "price": 20, 
         "filter": [
             "men",
             "women",
             "solidColor"
         ],
         "img": "https://www.simoncarter.net/Images/SuperZoom/000019_1.jpg"
+    },
+    {
+        "name": "Broccoli",
+        "id": 12,
+        "type": [
+            1,
+            2,
+            5
+        ],
+        "price": 30, 
+        "filter": [
+            "men",
+            "women",
+            "kids",
+            "pattern"
+        ],
+        "img": "https://www.fightingsawks.com/uploads/2/9/2/5/29258291/s865610946843620892_p189_i1_w411.jpeg"
     }
 ]
