@@ -1,15 +1,16 @@
 <li>
-    <img class="productThumb" src={{sock.img}}>
-    <p>{{sock.name}}</p>
-    <input #amount type="number" value="0" />
-    <ng-container>
-        <div *ngIf="selectedType != ''; then cartOk else cartNok">
-        </div>
-        <ng-template #cartOk>
-            <button (click)="cartService.addToCart(sock, amount.value, selectedType); amount.value = 0" formtarget="_blank">Add to cart</button>
-        </ng-template>
-        <ng-template #cartNok>
-            <button (click)="alert()" formtarget="_blank">Add to cart</button>
-        </ng-template>
-    </ng-container>
+  <img class="productThumb" src="{{ sock.img }}" />
+  <p>{{ sock.name }}</p>
+  <input #amount type="number" value="0" />
+  <ng-container>
+    <button
+      (click)="
+        addToCart( sock, amount.value);
+        amount.value = 0
+      "
+      formtarget="_blank"
+    >
+      Add to cart
+    </button>
+  </ng-container>
 </li>
